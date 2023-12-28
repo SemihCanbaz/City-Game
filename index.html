@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>3D Şehir Bilme Oyunu</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <div id="deck-container" class="hidden">
+        <!-- Resimleri ve bilgi alanlarını kart şeklinde belirtin -->
+        <div class="card" onclick="selectCard(this)">
+          <img class="city-image" src="img/ISTANBUL.jpeg" alt="ISTANBUL" />
+          <div class="card-info">İstanbul</div>
+        </div>
+        <div class="card">
+          <img class="city-image" src="img/HUNGARY.jpeg" alt="BUDAPEST" />
+          <div class="card-info">Budapest</div>
+        </div>
+
+        <div class="card">
+          <img class="city-image" src="img/LONDON.jpeg" alt="LONDON" />
+          <div class="card-info">London</div>
+        </div>
+
+        <div class="card">
+          <img class="city-image" src="img/PARIS.jpeg" alt="PARIS" />
+          <div class="card-info">Paris</div>
+        </div>
+
+        <div class="card">
+          <img class="city-image" src="img/TOKYO.jpeg" alt="TOKYO" />
+          <div class="card-info">Tokyo</div>
+        </div>
+
+        <!-- Diğer kartlar buraya eklenecek -->
+      </div>
+
+      <!-- Input ve gönderme tuşu -->
+      <div id="answer-container" class="hidden">
+        <input type="text" id="city-input" placeholder="Şehiri Yazın" />
+        <button onclick="checkAnswer()">Gönder</button>
+      </div>
+
+      <button onclick="startGame()">Oyuna Başla</button>
+    </div>
+    <div id="confetti-container"></div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.game-container {
+  text-align: center;
+}
+
+/* Diğer stiller */
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgeli arka plan */
+  transition: transform 0.3s ease-in-out; /* Hover etkisi için animasyon */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Hover etkisi */
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-bottom: 2px solid #4caf50;
+  border-radius: 10px 10px 0 0; /* Kartın üst kısmını yuvarlatır */
+}
+
+.card-info {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4caf50;
+  display: none;
+}
+
+.card.selected {
+  transform: translateY(-50vh) scale(1.2); /* Kartın yukarı çıkma animasyonu */
+}
+
+.card.selected .card-info {
+  display: block; /* Bilgi alanını göster */
+}
+
+/* Diğer stiller */
+
+#deck-container {
+  position: relative;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+#deck-container img {
+  position: absolute;
+  width: 500px;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Diğer stiller */
+
+.hidden {
+  display: none;
+}
+
+/* Diğer stiller */
+
+#image-board {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Ekranın yarısı kadar kaplayacak şekilde ayarlandı */
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#city-image.enlarged {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(4); /* Ekranın yarısı kadar kaplasın şekilde ayarlandı */
+  transition: transform 3s ease;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#answer-container {
+  margin-top: 20px;
+}
+
+#city-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4caf50; /* Oyun temasına uygun renk */
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Diğer stiller */
+
+.start-game-image {
+  width: 600px; /* İstediğiniz genişliği belirleyebilirsiniz */
+  height: auto; /* Genişliği oranında otomatik olarak ayarlamak için */
+}
+
+/* Diğer stiller */
